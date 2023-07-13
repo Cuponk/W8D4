@@ -15,7 +15,7 @@ class Cat {
     }
   }
 
-    Function.prototype.myBind = function(ctx, ...arg){
+  Function.prototype.myBind = function(ctx, ...arg){
     let that = this;
     return function(...call) {
         return that.apply(ctx, arg.concat(call));
